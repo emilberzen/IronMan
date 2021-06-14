@@ -13,6 +13,8 @@ public class MeshDestroy : MonoBehaviour
     public int CutCascades = 1;
     public float ExplodeForce = 0;
 
+    private GameObject partsToDelete;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,8 @@ public class MeshDestroy : MonoBehaviour
         originalMesh.RecalculateBounds();
         var parts = new List<PartMesh>();
         var subParts = new List<PartMesh>();
+
+
 
         var mainPart = new PartMesh()
         {
@@ -67,17 +71,26 @@ public class MeshDestroy : MonoBehaviour
             }
             parts = new List<PartMesh>(subParts);
             subParts.Clear();
+
+
+            Debug.Log(parts.Count);
         }
 
         for (var i = 0; i < parts.Count; i++)
         {
             parts[i].MakeGameobject(this);
             parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
+            Destroy(parts[i].GameObject,1);
         }
 
         Destroy(gameObject);
     }
+    private void deleteObjects()
+    {
 
+        
+
+    }
     private PartMesh GenerateMesh(PartMesh original, Plane plane, bool left)
     {
         var partMesh = new PartMesh() { };
@@ -188,6 +201,8 @@ public class MeshDestroy : MonoBehaviour
         return partMesh;
     }
 
+
+        
     private void AddEdge(int subMesh, PartMesh partMesh, Vector3 normal, Vector3 vertex1, Vector3 vertex2, Vector2 uv1, Vector2 uv2)
     {
         if (!edgeSet)
