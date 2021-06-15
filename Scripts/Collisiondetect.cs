@@ -7,19 +7,25 @@ public class Collisiondetect : MonoBehaviour
 {
 
     public int counter;
-    public TextMeshProUGUI test;
-
+    public TextMeshPro counterDisp;
+    public MeshDestroy meshDestroy;
     void OnCollisionEnter(Collision collision)
     {
+
+        
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "fallObject")
         {
-            Destroy(collision.gameObject,0);
+
+            int currentVal = int.Parse(counterDisp.text) + 1;
             Debug.Log("HEYY MR!!!!!!!!");
             counter++;
-            test.text = counter.ToString(); ;
-                
+            counterDisp.text = currentVal.ToString();
+            collision.gameObject.GetComponent<MeshDestroy>().DestroyMesh();
+            
         }
+
+    
     }
 
 }

@@ -27,11 +27,10 @@ public class MeshDestroy : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             DestroyMesh();
-            Debug.Log("DESTROY");
         }
     }
 
-    private void DestroyMesh()
+    public void DestroyMesh()
     {
         var originalMesh = GetComponent<MeshFilter>().mesh;
         originalMesh.RecalculateBounds();
@@ -73,7 +72,6 @@ public class MeshDestroy : MonoBehaviour
             subParts.Clear();
 
 
-            Debug.Log(parts.Count);
         }
 
         for (var i = 0; i < parts.Count; i++)
@@ -85,12 +83,10 @@ public class MeshDestroy : MonoBehaviour
 
         Destroy(gameObject);
     }
-    private void deleteObjects()
-    {
 
-        
 
-    }
+
+
     private PartMesh GenerateMesh(PartMesh original, Plane plane, bool left)
     {
         var partMesh = new PartMesh() { };

@@ -39,7 +39,7 @@ Material:
     - _Cutoff: 0.2
     - _Greyness: 1
     - _ScaleMult: 0.001
-    - _ShowBorders: 1
+    - _ShowBorders: 0
     m_Colors:
     - _SegmZeroColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -25,7 +25,7 @@ public class SpawnObjects : MonoBehaviour
 
     public void spawnObject()
     {
-        fallenObject = Instantiate(prefab, gameObject.transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)), Quaternion.identity);
+        fallenObject = Instantiate(prefab, gameObject.transform.position + new Vector3(0, Random.Range(-1f, 1f), Random.Range(-1f, 1f)), Quaternion.identity);
 
 
 
