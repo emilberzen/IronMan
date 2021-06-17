@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2340221424095925844}
   - component: {fileID: 2340221424095925847}
   - component: {fileID: 2340221424095925845}
-  - component: {fileID: 2340221424095925834}
+  - component: {fileID: -2595071827048173277}
   m_Layer: 0
   m_Name: Stone_2
   m_TagString: fallObject
@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CutCascades: 4
-  ExplodeForce: 300
---- !u!114 &2340221424095925834
+  ExplodeForce: 800
+--- !u!114 &-2595071827048173277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

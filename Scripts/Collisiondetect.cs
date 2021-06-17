@@ -8,11 +8,19 @@ public class Collisiondetect : MonoBehaviour
 
     public int counter;
     public TextMeshPro counterDisp;
-    public MeshDestroy meshDestroy;
+    private AudioSource sound;
+    // public MeshDestroy meshDestroy;
+
+
+    private void Start()
+    {
+        sound = GetComponent<AudioSource>();
+
+    }
     void OnCollisionEnter(Collision collision)
     {
 
-        
+        Debug.Log("THIS IS A TEST");
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "fallObject")
         {
@@ -22,7 +30,7 @@ public class Collisiondetect : MonoBehaviour
             counter++;
             counterDisp.text = currentVal.ToString();
             collision.gameObject.GetComponent<MeshDestroy>().DestroyMesh();
-            
+            sound.Play();
         }
 
     

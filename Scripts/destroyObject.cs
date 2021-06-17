@@ -5,13 +5,16 @@ using UnityEngine;
 public class destroyObject : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject, 6);
-    }
 
-    private void Update()
-    {
+
+        //Check for a match with the specified name on any GameObject that collides with your GameObject
+        if (collision.gameObject.tag == "road")
+        {
+            Destroy(gameObject,1);
+        } 
+
 
     }
 }
