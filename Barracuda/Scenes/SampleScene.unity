@@ -5149,6 +5149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IronMan_MixamoTest
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d5b87162e44754a8ddc68ba3e82350, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d5b87162e44754a8ddc68ba3e82350, type: 3}
 --- !u!1 &1631550108 stripped
@@ -5753,7 +5757,7 @@ MonoBehaviour:
   _layer:
     serializedVersion: 2
     m_Bits: 4
-  UseWebCam: 1
+  UseWebCam: 0
   WebCamIndex: 0
   VideoPlayer: {fileID: 769284634}
 --- !u!23 &1873549734
@@ -5851,7 +5855,7 @@ MonoBehaviour:
   NNModel: {fileID: 5022602860645237092, guid: 0f2d98c7d390b4e4aa1dc8cb869bd97d, type: 3}
   WorkerType: 32768
   Verbose: 0
-  VNectModel: {fileID: 392764967}
+  VNectModel: {fileID: 1009339738}
   videoCapture: {fileID: 1873549733}
   InputImageSize: 448
   HeatMapCol: 28
@@ -6843,7 +6847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8315583863143335206, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8315583863143700616, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
       propertyPath: m_LocalRotation.x
