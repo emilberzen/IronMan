@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class destroyObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void OnCollisionEnter(Collision collision)
+	// Start is called before the first frame update
+
+	private void Awake()
+	{
+
+	}
+	void OnCollisionEnter(Collision collision)
     {
 
 
@@ -13,8 +18,10 @@ public class destroyObject : MonoBehaviour
         if (collision.gameObject.tag == "road")
         {
             Destroy(gameObject,1);
+			Debug.Log("EXPLOSIOON");
         } 
 
 
     }
+
 }
