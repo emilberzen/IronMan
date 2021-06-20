@@ -16,7 +16,7 @@ public class Collisiondetect : MonoBehaviour
 	private Transform hitObject;
 	private void Awake()
 	{
-		//StartCoroutine("CheckForDeletedParticles");
+		StartCoroutine("CheckForDeletedParticles");
 
 	}
 	private void Start()
@@ -34,10 +34,8 @@ public class Collisiondetect : MonoBehaviour
             int currentVal = int.Parse(counterDisp.text) + 1;
             counter++;
             counterDisp.text = currentVal.ToString();
-			Debug.Log(collision.gameObject.transform.position);
 			hitObject.transform.position = collision.gameObject.transform.position;
 			spawnParticle();
-			Debug.Log("Explsion");
 			collision.gameObject.GetComponent<MeshDestroy>().DestroyMesh();
             sound.Play();
 
@@ -84,7 +82,7 @@ public class Collisiondetect : MonoBehaviour
 
 		return particles;
 	}
-	/*
+	
 	IEnumerator CheckForDeletedParticles()
 	{
 		while (true)
@@ -99,5 +97,5 @@ public class Collisiondetect : MonoBehaviour
 			}
 		}
 	}
-	*/
+	
 }

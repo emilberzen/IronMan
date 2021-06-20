@@ -38,26 +38,23 @@ public class SpawnObjects : MonoBehaviour
         {
 
             fallenObject.GetComponent<Rigidbody>().mass = 0.1f;
-            Debug.Log("1.Mass = " + fallenObject.GetComponent<Rigidbody>().mass);
 
         }else if(int.Parse(score.text) >= 4 && int.Parse(score.text) < 6) {
 
             fallenObject.GetComponent<Rigidbody>().mass = 0.2f;
-            Debug.Log("2.Mass = " + fallenObject.GetComponent<Rigidbody>().mass);
+
 
         }
         else if(int.Parse(score.text) >= 6 && int.Parse(score.text) < 10)
         {
 
             fallenObject.GetComponent<Rigidbody>().mass = 0.7f;
-            Debug.Log("3.Mass = " + fallenObject.GetComponent<Rigidbody>().mass);
 
         }
         else if (int.Parse(score.text) >= 10)
         {
 
             fallenObject.GetComponent<Rigidbody>().mass = 0.6f;
-            Debug.Log("4.Mass = " + fallenObject.GetComponent<Rigidbody>().mass);
 
         }
 

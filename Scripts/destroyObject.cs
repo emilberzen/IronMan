@@ -18,7 +18,6 @@ public class destroyObject : MonoBehaviour
         if (collision.gameObject.tag == "road")
         {
             Destroy(gameObject,1);
-			Debug.Log("EXPLOSIOON");
         } 
 
 
