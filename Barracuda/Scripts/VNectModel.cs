@@ -208,7 +208,7 @@ public class VNectModel : MonoBehaviour
         // etc
         jointPoints[PositionIndex.spine.Int()].Child = jointPoints[PositionIndex.neck.Int()];
         jointPoints[PositionIndex.neck.Int()].Child = jointPoints[PositionIndex.head.Int()];
-        //jointPoints[PositionIndex.head.Int()].Child = jointPoints[PositionIndex.Nose.Int()];
+        jointPoints[PositionIndex.head.Int()].Child = jointPoints[PositionIndex.Nose.Int()];
 
         useSkeleton = ShowSkeleton;
         if (useSkeleton)
@@ -356,15 +356,17 @@ public class VNectModel : MonoBehaviour
         head.Transform.rotation = Quaternion.LookRotation(gaze, f) * head.InverseRotation;
         
         // Wrist rotation (Test code)
+
+        /*
         var lHand = jointPoints[PositionIndex.lHand.Int()];
         var lf = TriangleNormal(lHand.Pos3D, jointPoints[PositionIndex.lMid1.Int()].Pos3D, jointPoints[PositionIndex.lThumb2.Int()].Pos3D);
         lHand.Transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.lThumb2.Int()].Pos3D - jointPoints[PositionIndex.lMid1.Int()].Pos3D, lf) * lHand.InverseRotation;
 
         var rHand = jointPoints[PositionIndex.rHand.Int()];
         var rf = TriangleNormal(rHand.Pos3D, jointPoints[PositionIndex.rThumb2.Int()].Pos3D, jointPoints[PositionIndex.rMid1.Int()].Pos3D);
-        //rHand.Transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.rThumb2.Int()].Pos3D - jointPoints[PositionIndex.rMid1.Int()].Pos3D, rf) * rHand.InverseRotation;
         rHand.Transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.rThumb2.Int()].Pos3D - jointPoints[PositionIndex.rMid1.Int()].Pos3D, rf) * rHand.InverseRotation;
-
+        rHand.Transform.rotation = Quaternion.LookRotation(jointPoints[PositionIndex.rThumb2.Int()].Pos3D - jointPoints[PositionIndex.rMid1.Int()].Pos3D, rf) * rHand.InverseRotation;
+        */
         foreach (var sk in Skeletons)
         {
             var s = sk.start;

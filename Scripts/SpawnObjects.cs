@@ -7,12 +7,14 @@ public class SpawnObjects : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject prefab;
-    public int delay = 1;
+    public int delay = 10;
     public int frequency = 3;
     private GameObject fallenObject;
     List<GameObject> fallObjects = new List<GameObject>();
 
-    public TextMeshPro score; 
+    public TextMeshPro score;
+
+    private bool startGame = false;
 
     void Start()
     {
@@ -66,5 +68,7 @@ public class SpawnObjects : MonoBehaviour
 
 
     }
+
+
 
 }
