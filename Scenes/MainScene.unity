@@ -28954,9 +28954,9 @@ MonoBehaviour:
   KalmanParamQ: 0.001
   KalmanParamR: 0.0015
   UseLowPassFilter: 1
-  LowPassParam: 0.1
+  LowPassParam: 0.5
   Msg: {fileID: 1198046882}
-  WaitTimeModelLoad: 5
+  WaitTimeModelLoad: 1
   InitImg: {fileID: 2800000, guid: ad05e7fc23ec7df40acf63ce37cc522f, type: 3}
 --- !u!4 &1875476001
 Transform:
